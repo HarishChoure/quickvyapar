@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Vyapar - B2B Solutions</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="https://quickvyapar.com/favicon.ico">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #065f46 0%, #047857 50%, #059669 100%);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    }
+    
+    .glass-effect {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, #065f46, #059669);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .neon-glow {
+      box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+    }
+    
+    .stats-counter {
+      font-variant-numeric: tabular-nums;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-effect">
+    <div class="container mx-auto px-4 py-4 max-w-full">
+      <div class="flex flex-wrap justify-between items-center">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <h1 class="text-2xl font-bold text-gradient">Quick Vyapar</h1>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="#features" class="text-gray-700 hover:text-green-600 transition-colors">Features</a>
+          <a href="#how-it-works" class="text-gray-700 hover:text-green-600 transition-colors">How It Works</a>
+          <a href="#contact" class="text-gray-700 hover:text-green-600 transition-colors">Contact</a>
+          <a href="https://quickvyapar.com/" class="bg-green-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-green-700 transition-all neon-glow">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen hero-gradient flex items-center pt-20">
+    <div class="container mx-auto px-4 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="fade-in-up">
+          <div class="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <span class="w-2 h-2 bg-green-500 rounded-full mr-2 pulse-animation"></span>
+            100% Free B2B Platform
+          </div>
+          <h2 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            Grow Your <span class="text-gradient">Business</span><br>
+            With Smart <span class="text-gradient">B2B Solutions</span>
+          </h2>
+          <p class="text-lg sm:text-xl text-green-700 font-semibold mb-4">Sell Smart, Sell Fast</p>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+            Connect with verified buyers and sellers across India. Get 30 qualified leads monthly and expand your business network effortlessly.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://quickvyapar.com/" class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-all shadow-lg hover:shadow-xl">
+              Start Free Today
+            </a>
+            <button class="border-2 border-green-600 text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 hover:text-white transition-all">
+              Watch Demo
+            </button>
+          </div>
+        </div>
+        <div class="floating">
+          <div class="relative">
+            <div class="absolute -top-4 -right-4 w-72 h-72 bg-green-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+            <div class="absolute -bottom-8 -left-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+            <div class="relative bg-white rounded-3xl p-8 shadow-2xl">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold">Monthly Leads</h3>
+                  <span class="text-2xl font-bold text-green-600 stats-counter">30+</span>
+                </div>
+                <div class="bg-green-50 rounded-2xl p-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">New buyer inquiry</span>
+                  </div>
+                  <p class="text-sm text-gray-800 mt-2">Looking for electronic components...</p>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <span class="text-sm text-gray-600">Product match found</span>
+                  </div>
+                  <p class="text-sm text-gray-800 mt-2">Seller in your area available...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 w-full">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 sm:grid-cols-2">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-green-600 mb-2 stats-counter">10,000+</div>
+          <div class="text-gray-600">Active Businesses</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-green-600 mb-2 stats-counter">50,000+</div>
+          <div class="text-gray-600">Products Listed</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-green-600 mb-2 stats-counter">₹5Cr+</div>
+          <div class="text-gray-600">Business Value</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-bold text-green-600 mb-2 stats-counter">99%</div>
+          <div class="text-gray-600">Customer Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 w-full">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold mb-4">Powerful Features for <span class="text-gradient">B2B Success</span></h3>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to grow your business and connect with the right partners</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 sm:grid-cols-2">
+        <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Sell Products</h4>
+          <p class="text-gray-600">Create compelling product listings and reach thousands of verified buyers across India.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+          <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Find Suppliers</h4>
+          <p class="text-gray-600">Post your requirements and let verified suppliers compete for your business.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+          <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">30 Leads Monthly</h4>
+          <p class="text-gray-600">Get up to 30 verified leads every month to accelerate your business growth.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-3xl shadow-lg card-hover">
+          <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Smart Filters</h4>
+          <p class="text-gray-600">Filter by location, category, and requirements to find exactly what you need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20 bg-white">
+    <div class="container mx-auto px-4 w-full">
+      <div class="text-center mb-16">
+        <h3 class="text-4xl font-bold mb-4">How It <span class="text-gradient">Works</span></h3>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Simple steps to start growing your business today</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 sm:grid-cols-1">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">1</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Sign Up Free</h4>
+          <p class="text-gray-600">Create your account in minutes and start exploring opportunities immediately.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">2</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Post & Browse</h4>
+          <p class="text-gray-600">List your products or post requirements. Browse thousands of verified listings.</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-white">3</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Connect & Grow</h4>
+          <p class="text-gray-600">Connect with verified businesses and close deals to grow your network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center sm:grid-cols-1">
+        <div>
+          <h3 class="text-4xl font-bold mb-6">Why Choose <span class="text-gradient">Quick Vyapar?</span></h3>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-lg mb-2">100% Free Platform</h4>
+                <p class="text-gray-600">No hidden fees, no subscription charges. Start growing your business today.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-lg mb-2">Verified Businesses</h4>
+                <p class="text-gray-600">Connect only with verified and trusted business partners across India.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-lg mb-2">24/7 Support</h4>
+                <p class="text-gray-600">Our dedicated support team is always ready to help you succeed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-8 rounded-3xl shadow-xl">
+          <div class="text-center mb-6">
+            <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Safety First</h4>
+          </div>
+          <div class="space-y-4 text-sm text-gray-600">
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+              <p>Advanced payment is strictly prohibited</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+              <p>Always verify products before payment</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+              <p>Meet in safe, public locations</p>
+            </div>
+            <div class="flex items-start space-x-3">
+              <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+              <p>We're not responsible for direct payment losses</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 gradient-bg">
+    <div class="container mx-auto px-4 text-center w-full">
+      <h3 class="text-4xl font-bold text-white mb-6">Ready to Grow Your Business?</h3>
+      <p class="text-lg sm:text-xl text-green-100 mb-8 max-w-2xl mx-auto">Sell Smart, Sell Fast</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://quickvyapar.com/" class="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all shadow-lg">
+          Get Started Free
+        </a>
+        <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-green-600 transition-all">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container mx-auto px-4 w-full">
+      <div class="grid md:grid-cols-4 gap-8 sm:grid-cols-2">
+        <div>
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold">Quick Vyapar</h4>
+          </div>
+          <p class="text-gray-400 mb-4">Connecting businesses across India with smart B2B solutions.</p>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com/quickvyapar" class="text-gray-400 hover:text-green-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/quickvyapar" class="text-gray-400 hover:text-green-400 transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.497 5.782 2.225 7.148 2.163 8.414 2.105 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.363 3.678 1.344c-.98.98-1.213 2.092-1.272 3.373C2.013 8.332 2 8.741 2 12c0 3.259.013 3.668.072 4.948.059 1.281.292 2.393 1.272 3.373.98.98 2.092 1.213 3.373 1.272C8.332 23.987 8.741 24 12 24c3.259 0 3.668-.013 4.948-.072 1.281-.059 2.393-.292 3.373-1.272.98-.98 1.213-2.092 1.272-3.373.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.668-.072-4.948-.059-1.281-.292-2.393-1.272-3.373-.98-.98-2.092-1.213-3.373-1.272C15.668.013 15.259 0 12 0zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A3.999 3.999 0 1 1 12 8a3.999 3.999 0 0 1 0 7.999zm6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h5 class="font-semibold mb-4">Company</h5>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-green-400 transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Press</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="font-semibold mb-4">Support</h5>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-green-400 transition-colors">Help Center</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Safety</a></li>
+            <li><a href="#" class="hover:text-green-400 transition-colors">Status</a></li>
+          </ul>
+        </div>
+        
+        <div>
